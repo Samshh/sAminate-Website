@@ -58,8 +58,8 @@ onMounted(() => {
   color: #161616;
   user-select: none;
   margin: 0;
-  top: -50;
   opacity: 0;
+  text-align: center;
 }
 .links {
   color: #161616;
