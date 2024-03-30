@@ -3,7 +3,7 @@ import { onMounted } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TextPlugin } from "gsap/TextPlugin";
-import { animateSVGStrokeStagger } from "saminations";
+import { animateSVGStrokeStagger } from "saminate";
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(TextPlugin);
@@ -73,17 +73,13 @@ onMounted(() => {
         </g>
       </svg>
       <h1 class="svgdesc2">animateSVGStrokeStagger</h1>
-      <p class="suggestedToggle">suggested toggleAction: "play reset play reset" (unique default)</p>
-      <p class="suggestedToggle">DON'T use "reverse" "scrub"</p>
+      <p class="suggestedToggle">animate each path of the SVG</p>
+      <p class="suggestedToggle">use default toggleActions</p>
     </div>
   </div>
 </template>
 
 <style scoped>
-.animateSVG2 {
-  height: auto;
-  width: auto;
-}
 .suggestedToggle {
   font-size: clamp(0.8rem, 2vw, 1.5rem);
   color: #e7e7e7;
@@ -94,10 +90,9 @@ onMounted(() => {
 .animateSVGStrokeStagger {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   overflow: hidden;
   height: 100vh;
-  width: 100vw;
 }
 .svg2Wrapper {
   display: flex;
@@ -116,7 +111,7 @@ onMounted(() => {
 
 @media (max-width: 424px) {
   .animateSVG2 {
-    scale: 0.75;
+    scale: 0.50;
   }
 }
 </style>

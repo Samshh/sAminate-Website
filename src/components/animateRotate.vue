@@ -3,7 +3,7 @@ import { onMounted } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TextPlugin } from "gsap/TextPlugin";
-import { animateRotate } from "saminations";
+import { animateRotate } from "saminate";
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(TextPlugin);
@@ -45,9 +45,8 @@ onMounted(() => {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   overflow: hidden;
-  width: 100vw;
+  height: 100vh;
 }
 .animateRot {
   font-size: clamp(1rem, 5vw, 3rem);

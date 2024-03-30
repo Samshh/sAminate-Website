@@ -3,7 +3,7 @@ import { onMounted } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TextPlugin } from "gsap/TextPlugin";
-import { animateSVGStroke } from "saminations";
+import { animateSVGStroke } from "saminate";
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(TextPlugin);
@@ -418,8 +418,6 @@ c0 -204 37 -685 75 -975 12 -94 20 -173 18 -175 -2 -3 -30 -4 -62 -3 -62 2
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  height: 100vh;
-  width: 100vw;
 }
 .svg1Wrapper {
   display: flex;

@@ -1,9 +1,8 @@
 <script setup>
 import { onMounted, computed } from "vue";
 import { gsap } from "gsap";
-import { Icon } from "@iconify/vue";
 
-let text = "sAminations";
+let text = "sAminate";
 let chars = computed(() => text.split(""));
 
 onMounted(() => {
@@ -32,7 +31,7 @@ onMounted(() => {
     <h1 class="mainHeroTxt">
       <span v-for="(char, i) in chars" :key="i">{{ char }}</span>
     </h1>
-    <p class="subHeroTxt">a GSAP animations <a class="links" target="_blank" href="https://github.com/Samshh/sAminations">library</a> for JavaScript</p>
+    <p class="subHeroTxt">a GSAP animations <a class="links" target="_blank" href="https://github.com/Samshh/saminate">library</a> for JavaScript</p>
     <p class="subHeroTxt">by <a class="links" target="_blank" href="https://samshh.netlify.app/">samshh.</a></p>
   </div>
 </template>
@@ -54,7 +53,7 @@ onMounted(() => {
   margin: 0;
 }
 .subHeroTxt {
-  font-size: clamp(0.8rem, 5vw, 1.5rem);
+  font-size: clamp(0.8rem, 2vw, 1.5rem);
   color: #161616;
   user-select: none;
   margin: 0;

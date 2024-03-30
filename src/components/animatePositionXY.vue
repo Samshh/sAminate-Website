@@ -3,26 +3,29 @@ import { onMounted } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TextPlugin } from "gsap/TextPlugin";
-import { animateText, animateTextRemove } from "saminate";
+import { animatePositionX, animatePositionY } from "saminate";
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(TextPlugin);
 onMounted(() => {
-  animateText(
-    ".animateTxt",
-    "updated text",
-    ".animateTextWrap",
-    4,
+  animatePositionX(
+    ".animateX",
+    ".positionXY",
+    "500",
+    1,
+    0,
     0,
     "power1.inOut",
     "top center",
     "bottom center",
     "play reset play reset"
   );
-  animateTextRemove(
-    ".animateTextRem",
-    ".animateTextWrap",
-    4,
+  animatePositionY(
+    ".animateY",
+    ".positionXY",
+    "500",
+    1,
+    0,
     0,
     "power1.inOut",
     "top center",
@@ -33,43 +36,26 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="animateTextWrap">
-    <div class="animateText">
-      <h1 class="animateTxt">animateText</h1>
-      <p class="descSuggestion">animate a text to update</p>
+  <div class="positionXY">
+    <div class="animatePositionX">
+      <h1 class="animateX">animatePositionX</h1>
+      <p class="descSuggestion">animate the position of an element in X-axis</p>
     </div>
-    <div class="animateTextRemove">
-      <h1 class="animateTextRem">animateTextRemove</h1>
-      <p class="descSuggestion">animate a text to remove</p>
+    <div class="animatePositionY">
+      <h1 class="animateY">animatePositionY</h1>
+      <p class="descSuggestion">animate the position of an element in Y-axis</p>
     </div>
   </div>
 </template>
 
 <style scoped>
-.animateTextWrap {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.positionXY {
+  display: flex;
   justify-content: space-evenly;
   align-items: center;
   height: 100vh;
   overflow: hidden;
   width: 100vw;
-}
-.animateText,
-.animateTextRemove {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.animateTxt,
-.animateTextRem {
-  font-size: clamp(1rem, 5vw, 3rem);
-  color: #161616;
-  user-select: none;
-  margin: 0;
-  text-align: center;
-  height: clamp(1.5rem, 6vw, 4rem);
 }
 .descSuggestion {
   font-size: clamp(0.8rem, 3vw, 1.5rem);
@@ -78,9 +64,24 @@ onMounted(() => {
   margin: 0;
   text-align: center;
 }
+.animatePositionX,
+.animatePositionY {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.animateX,
+.animateY {
+  font-size: clamp(1rem, 5vw, 3rem);
+  color: #161616;
+  user-select: none;
+  margin: 0;
+  text-align: center;
+}
+
 @media (max-width: 1024px) {
-  .animateTextWrap {
-    display: flex;
+  .positionXY {
     flex-direction: column;
   }
 }

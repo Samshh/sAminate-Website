@@ -3,7 +3,7 @@ import { onMounted } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TextPlugin } from "gsap/TextPlugin";
-import { animatePin, animateChangeColor } from "saminations";
+import { animatePin, animateChangeColor } from "saminate";
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(TextPlugin);
@@ -30,7 +30,6 @@ onMounted(() => {
       <p class="animatePinThisDesc">use display: grid;</p>
     </div>
     <div class="unpinned">
-      <h1 class="elementUnPinned">your element here</h1>
       <h1 class="elementUnPinned">THANK</h1>
       <h1 class="elementUnPinned">YOU</h1>
       <h1 class="elementUnPinned">FOR</h1>
