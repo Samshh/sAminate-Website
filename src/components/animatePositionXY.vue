@@ -80,7 +80,7 @@ onMounted(() => {
   text-align: center;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1310px) {
   .positionXY {
     flex-direction: column;
   }

@@ -90,9 +90,10 @@ onMounted(() => {
 .animateSVGStrokeStagger {
   display: flex;
   justify-content: center;
-  align-items: start;
+  align-items: center;
   overflow: hidden;
-  height: 100vh;
+  height: fit-content;
+  padding-bottom: 80px
 }
 .svg2Wrapper {
   display: flex;
